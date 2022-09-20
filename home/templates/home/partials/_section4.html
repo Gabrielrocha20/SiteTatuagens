@@ -1,0 +1,68 @@
+<section class="u-carousel u-slide u-block-5dfd-1" id="carousel_4c2c" data-interval="5000" data-u-ride="carousel">
+    <ol class="u-absolute-hcenter u-carousel-indicators u-block-5dfd-2">
+      <li data-u-target="#carousel_4c2c" data-u-slide-to="0" class="u-active u-grey-30"></li>
+      <li data-u-target="#carousel_4c2c" class="u-grey-30" data-u-slide-to="1"></li>
+    </ol>
+    <div class="u-carousel-inner" role="listbox">
+      <div class="u-active u-carousel-item u-clearfix u-image u-section-4-1">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+          <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+              <div class="u-layout-row">
+                <div class="u-align-left u-container-style u-layout-cell u-size-25-md u-size-25-sm u-size-25-xs u-size-30-lg u-size-30-xl u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                  <div class="u-container-layout u-valign-top u-container-layout-1">
+                    <h2 class="u-text u-text-body-alt-color u-text-1">Tecnicas Utilizadas</h2>
+                  </div>
+                </div>
+                <div class="u-align-justify u-container-style u-layout-cell u-shading u-shape-rectangle u-size-30-lg u-size-30-xl u-size-35-md u-size-35-sm u-size-35-xs u-layout-cell-2">
+                  <div class="u-container-layout u-valign-top u-container-layout-2">
+                    <h2 class="u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                      Apresentação das tecnicas
+                    </h2>
+                    <a href="https://nicepage.one" class="u-active-palette-4-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-button-style u-hover-palette-4-base u-text-active-white u-text-body-color u-text-hover-white u-white u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Clique aqui</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% for categoria in tatoos %}
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-shading u-section-4-2" src="" data-image-width="256" data-image-height="256">
+          <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+              <div class="u-layout">
+                <div class="u-layout-row">
+                  <div class="u-align-justify u-container-style u-layout-cell u-shape-rectangle u-size-30-lg u-size-30-xl u-size-35-md u-size-35-sm u-size-35-xs u-layout-cell-2">
+                    <div class="u-container-layout u-valign-top  u-align-center u-container-layout-2">
+                      <h2 class="u-text u-text-body-alt-color u-text-default u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
+                        {{ categoria.categoria }}
+                      </h2>  
+                      <p>
+                        {{ categoria.categoria.descricao }}
+                      </p>
+                      <a href="{% url 'home:galeria' categoria.categoria.id %}" class="u-active-palette-4-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn u-button-style u-hover-palette-4-base u-text-active-white u-text-body-color u-text-hover-white u-white u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">Clique aqui</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-5dfd-3" href="#carousel_4c2c" role="button" data-u-slide="prev">
+      <span aria-hidden="true">
+        <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                  c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+      </span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-5dfd-4" href="#carousel_4c2c" role="button" data-u-slide="next">
+      <span aria-hidden="true">
+        <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                  c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+      </span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </section>
+  

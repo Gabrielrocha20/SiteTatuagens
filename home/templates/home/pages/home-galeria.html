@@ -1,0 +1,22 @@
+{% extends 'home/pages/base.html' %}
+
+{% block title %}{{ tatoos.categoria }}{% endblock %}
+
+{% block content %}
+<section class="u-align-center u-clearfix u-section-1" id="sec-2720">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1" id="carousel-b0db">
+          <div class="u-gallery-inner u-gallery-inner-1" role="listbox">
+
+            {% for tatoo in categoria %}
+                  {% include 'home/partials/_section_images.html'%}
+            {% endfor %}
+            
+          </div>
+        </div>
+      </div>
+</section>
+{% endblock %}
+
+
+      
